@@ -1,0 +1,102 @@
+"".main STEXT size=72 args=0x0 locals=0x10
+	0x0000 00000 (main.go:6)	TEXT	"".main(SB), ABIInternal, $16-0
+	0x0000 00000 (main.go:6)	MOVQ	(TLS), CX
+	0x0009 00009 (main.go:6)	CMPQ	SP, 16(CX)
+	0x000d 00013 (main.go:6)	JLS	65
+	0x000f 00015 (main.go:6)	SUBQ	$16, SP
+	0x0013 00019 (main.go:6)	MOVQ	BP, 8(SP)
+	0x0018 00024 (main.go:6)	LEAQ	8(SP), BP
+	0x001d 00029 (main.go:6)	FUNCDATA	$0, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+	0x001d 00029 (main.go:6)	FUNCDATA	$1, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+	0x001d 00029 (main.go:6)	FUNCDATA	$2, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+	0x001d 00029 (main.go:7)	PCDATA	$0, $0
+	0x001d 00029 (main.go:7)	PCDATA	$1, $0
+	0x001d 00029 (main.go:7)	CALL	runtime.printlock(SB)
+	0x0022 00034 (main.go:7)	MOVBLZX	"".e(SB), AX
+	0x0029 00041 (main.go:7)	MOVQ	AX, (SP)
+	0x002d 00045 (main.go:7)	CALL	runtime.printuint(SB)
+	0x0032 00050 (main.go:7)	CALL	runtime.printunlock(SB)
+	0x0037 00055 (main.go:8)	MOVQ	8(SP), BP
+	0x003c 00060 (main.go:8)	ADDQ	$16, SP
+	0x0040 00064 (main.go:8)	RET
+	0x0041 00065 (main.go:8)	NOP
+	0x0041 00065 (main.go:6)	PCDATA	$1, $-1
+	0x0041 00065 (main.go:6)	PCDATA	$0, $-1
+	0x0041 00065 (main.go:6)	CALL	runtime.morestack_noctxt(SB)
+	0x0046 00070 (main.go:6)	JMP	0
+	0x0000 65 48 8b 0c 25 00 00 00 00 48 3b 61 10 76 32 48  eH..%....H;a.v2H
+	0x0010 83 ec 10 48 89 6c 24 08 48 8d 6c 24 08 e8 00 00  ...H.l$.H.l$....
+	0x0020 00 00 0f b6 05 00 00 00 00 48 89 04 24 e8 00 00  .........H..$...
+	0x0030 00 00 e8 00 00 00 00 48 8b 6c 24 08 48 83 c4 10  .......H.l$.H...
+	0x0040 c3 e8 00 00 00 00 eb b8                          ........
+	rel 5+4 t=16 TLS+0
+	rel 30+4 t=8 runtime.printlock+0
+	rel 37+4 t=15 "".e+0
+	rel 46+4 t=8 runtime.printuint+0
+	rel 51+4 t=8 runtime.printunlock+0
+	rel 66+4 t=8 runtime.morestack_noctxt+0
+"".init STEXT nosplit size=63 args=0x0 locals=0x8
+	0x0000 00000 (main.go:4)	TEXT	"".init(SB), NOSPLIT|ABIInternal, $8-0
+	0x0000 00000 (main.go:4)	SUBQ	$8, SP
+	0x0004 00004 (main.go:4)	MOVQ	BP, (SP)
+	0x0008 00008 (main.go:4)	LEAQ	(SP), BP
+	0x000c 00012 (main.go:4)	FUNCDATA	$0, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+	0x000c 00012 (main.go:4)	FUNCDATA	$1, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+	0x000c 00012 (main.go:4)	FUNCDATA	$2, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+	0x000c 00012 (main.go:4)	PCDATA	$0, $0
+	0x000c 00012 (main.go:4)	PCDATA	$1, $0
+	0x000c 00012 (main.go:4)	MOVQ	"".d(SB), CX
+	0x0013 00019 (main.go:4)	TESTQ	CX, CX
+	0x0016 00022 (main.go:4)	JLT	57
+	0x0018 00024 (main.go:4)	CMPQ	CX, $32
+	0x001c 00028 (main.go:4)	SBBL	AX, AX
+	0x001e 00030 (main.go:4)	MOVL	$1, DX
+	0x0023 00035 (main.go:4)	SHLL	CX, DX
+	0x0025 00037 (main.go:4)	ANDL	AX, DX
+	0x0027 00039 (main.go:4)	SHRB	$7, DL
+	0x002a 00042 (main.go:4)	MOVB	DL, "".e(SB)
+	0x0030 00048 (main.go:4)	MOVQ	(SP), BP
+	0x0034 00052 (main.go:4)	ADDQ	$8, SP
+	0x0038 00056 (main.go:4)	RET
+	0x0039 00057 (main.go:4)	CALL	runtime.panicshift(SB)
+	0x003e 00062 (main.go:4)	XCHGL	AX, AX
+	0x0000 48 83 ec 08 48 89 2c 24 48 8d 2c 24 48 8b 0d 00  H...H.,$H.,$H...
+	0x0010 00 00 00 48 85 c9 7c 21 48 83 f9 20 19 c0 ba 01  ...H..|!H.. ....
+	0x0020 00 00 00 d3 e2 21 c2 c0 ea 07 88 15 00 00 00 00  .....!..........
+	0x0030 48 8b 2c 24 48 83 c4 08 c3 e8 00 00 00 00 90     H.,$H..........
+	rel 15+4 t=15 "".d+0
+	rel 44+4 t=15 "".e+0
+	rel 58+4 t=8 runtime.panicshift+0
+go.cuinfo.packagename. SDWARFINFO dupok size=0
+	0x0000 6d 61 69 6e                                      main
+go.loc."".main SDWARFLOC size=0
+go.info."".main SDWARFINFO size=33
+	0x0000 03 22 22 2e 6d 61 69 6e 00 00 00 00 00 00 00 00  ."".main........
+	0x0010 00 00 00 00 00 00 00 00 00 01 9c 00 00 00 00 01  ................
+	0x0020 00                                               .
+	rel 9+8 t=1 "".main+0
+	rel 17+8 t=1 "".main+72
+	rel 27+4 t=29 gofile../Users/fanfei/fantasy/go-test/lenofbytes/main.go+0
+go.range."".main SDWARFRANGE size=0
+go.isstmt."".main SDWARFMISC size=0
+	0x0000 04 0f 04 0e 03 05 01 0b 02 1b 00                 ...........
+go.loc."".init SDWARFLOC size=0
+go.info."".init SDWARFINFO size=33
+	0x0000 03 22 22 2e 69 6e 69 74 00 00 00 00 00 00 00 00  ."".init........
+	0x0010 00 00 00 00 00 00 00 00 00 01 9c 00 00 00 00 01  ................
+	0x0020 00                                               .
+	rel 9+8 t=1 "".init+0
+	rel 17+8 t=1 "".init+63
+	rel 27+4 t=29 gofile../Users/fanfei/fantasy/go-test/lenofbytes/main.go+0
+go.range."".init SDWARFRANGE size=0
+go.isstmt."".init SDWARFMISC size=0
+	0x0000 08 0c 03 07 01 1d 02 0f 00                       .........
+""..inittask SNOPTRDATA size=32
+	0x0000 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0010 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	rel 24+8 t=1 "".init+0
+"".d SNOPTRDATA size=8
+	0x0000 09 00 00 00 00 00 00 00                          ........
+"".e SNOPTRBSS size=1
+gclocals·33cdeccccebe80329f1fdbee7f5874cb SRODATA dupok size=8
+	0x0000 01 00 00 00 00 00 00 00                          ........
