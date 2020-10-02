@@ -22,7 +22,7 @@
 
 ### 语言
 #### lua
-[lua虚拟机相关]()
+[lua虚拟机相关](https://github.com/fanfei93/fantasy/blob/master/language/lua/lua%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9B%B8%E5%85%B3.md)
 
 
 ### 算法
