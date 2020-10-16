@@ -20,10 +20,19 @@ func main()  {
 	//}
 	//log.Println(arr2)
 
-	m := make(map[int]int)
-	s := []int{1,2,3}
-	for k, v := range s {
-		m[k] = v
+	//m := make(map[int]int)
+	//s := []int{1,2,3}
+	//for k, v := range s {
+	//	m[k] = v
+	//}
+	//fmt.Print(m)
+
+	a := []int{1,2,3}
+	test(a...)
+}
+
+func test(args ...int)  {
+	for _, v := range args {
+		fmt.Println(v)
 	}
-	fmt.Print(m)
 }
