@@ -26,7 +26,7 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 			left = left.Next
 		}
 	}
-	if n  == -1 {
+	if n == -1 {
 		left.Next = left.Next.Next
 	} else {
 		return res.Next
