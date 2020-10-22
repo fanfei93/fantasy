@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type issue struct {
 	A int
@@ -26,6 +28,13 @@ func main()  {
 	//	m[k] = v
 	//}
 	//fmt.Print(m)
+
+	s := make([]int, 0, 20)
+	for i := 0; i < 20; i++ {
+		s  = append(s, i)
+	}
+	fmt.Println(s)
+
 
 	a := []int{1,2,3}
 	test(a...)

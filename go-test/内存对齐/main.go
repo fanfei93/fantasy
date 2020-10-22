@@ -5,19 +5,26 @@ import (
 	"unsafe"
 )
 
+type Test struct {
+	ID int64 `json:"id"`
+	ComponentID int64 `json:"component_id"`
+	Version string `json:"version" binding:"required"`
+	Remark string `json:"remark"`
+}
+
 func main() {
 	fmt.Println(unsafe.Sizeof(struct {
-		i8  int32
-		i16 int32
-		i32 int64
-		a string
-		s []int
+		a int8
+		d int8
+		e string
+		b int16
+		c int16
+		f string
+
 	}{}))
 	fmt.Println(unsafe.Sizeof(struct {
-		i8  int32
-		i32 int64
-		i16 int32
-		a string
-		s []int
+		a int8
+		c int8
+		b int16
 	}{}))
 }
