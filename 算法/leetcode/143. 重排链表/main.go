@@ -31,7 +31,7 @@ func reorderList(head *ListNode)  {
 	}
 
 	for i := 0; i < len(m) / 2; i++ {
-		m[i].Next, m[len(m)-1-i].Next = m[len(m)-1-i], m[i].Next
+		m[i].Next, m[len(m)-1-i].Next = m[len(m)-1-i], m[i].Nextgo
 	}
 	m[len(m)/2].Next = nil
 }
